@@ -2,8 +2,7 @@ import PropTypes from "prop-types";
 import Button from "components/Button";
 import styles from './FeedbackOptions.module.css';
 
-export default function FeedbackOptions(props) {
-  const { options, onLeaveFeedback } = props;
+export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <div className={styles.group}>
       {options.map(option =>

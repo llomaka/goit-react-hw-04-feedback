@@ -10,14 +10,13 @@ const App = () => {
     neutral: 0,
     bad: 0
   });
-
   const getKeys = () => Object.keys(feedback);
   const countTotalFeedback = () => (feedback.good + feedback.neutral + feedback.bad);
   const countPositiveFeedbackPercentage = () => {
     if (!feedback.good && !feedback.neutral && !feedback.bad) return 0;
     else { return Math.round((feedback.good / (feedback.good + feedback.neutral + feedback.bad)) * 100); }
   };
-  const handleClick = (event) => {
+  const handleClick = event => {
     const { name } = event.target;
     setFeedback(prevState => ({
       ...prevState,
